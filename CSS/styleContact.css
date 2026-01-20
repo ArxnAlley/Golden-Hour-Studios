@@ -1,0 +1,541 @@
+/* CONTACT PAGE LAYOUT */
+
+.contactPage 
+{
+    margin-top: 110px;
+    
+    min-height: 100vh;
+    
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr;
+    
+    gap: 60px;
+    
+    padding: 40px 60px;
+    
+    background: linear-gradient(to bottom, #FFF8E1, #FFE082);
+}
+
+/* INTRO SECTION */
+
+.introSection 
+{
+    display: flex;
+    
+    flex-direction: column;
+    
+    justify-content: center;
+    
+    background: transparent;
+}
+
+.introSection h2 
+{
+    font-size: 2.8rem;
+    
+    color: #DAA520;
+    
+    margin-bottom: 20px;
+}
+
+.introSection p 
+{
+    font-size: 1.5rem;
+    
+    line-height: 1.7;
+    
+    color: #5C4033;
+    
+    margin-bottom: 10px;
+}
+
+/* FORM + ASIDE LAYOUT */
+
+.formLayout 
+{
+    display: flex;
+    
+    gap: 30px;
+    
+    width: 100%;
+}
+
+/* CONTACT FORM */
+
+.contactForm 
+{
+    flex: 1;
+    
+    display: flex;
+    
+    flex-direction: column;
+    
+    gap: 8px;
+    
+    padding: 22px;
+
+    padding-bottom: 40px;
+    
+    background-color: #FFFFFF;
+    
+    border: 3px solid #E6B800;
+    
+    border-radius: 20px;
+    
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+    
+    max-height: calc(100vh - 220px);
+}
+
+.contactForm input,
+.contactForm select,
+.contactForm textarea 
+{
+    padding: 12px;
+    
+    border: 2px solid #DAA520;
+    
+    border-radius: 10px;
+    
+    font-size: 1rem;
+}
+
+.contactForm textarea 
+{
+    min-height: 120px;
+    
+    resize: vertical;
+}
+
+.contactForm button 
+{
+    margin-bottom: 14px;
+    
+    padding: 14px;
+    
+    background-color: #DAA520;
+    
+    color: #FFFFFF;
+    
+    border: none;
+    
+    border-radius: 10px;
+    
+    font-size: 1.1rem;
+    
+    font-weight: bold;
+    
+    cursor: pointer;
+}
+
+.contactForm button:hover 
+{
+    background-color: #B8961D;
+}
+
+/* FORM FIELD */
+
+.formField 
+{
+    display: flex;
+    
+    flex-direction: column;
+    
+    gap: 4px;
+}
+
+.formField label 
+{
+    font-weight: bold;
+    
+    color: #5C4033;
+}
+
+.fieldHint 
+{
+    font-size: 0.85rem;
+    
+    color: rgba(92,64,51,0.7);
+}
+
+/* SIDE INFO */
+
+.formSideInfo 
+{
+    flex: 1;
+}
+
+.formSideInfo h3 
+{
+    color: #DAA520;
+    
+    font-size: 2rem;
+    
+    margin-bottom: 15px;
+}
+
+.formSideInfo p 
+{
+    font-size: 1.5rem;
+    
+    line-height: 1.7;
+    
+    color: #5C4033;
+    
+    margin-bottom: 10px;
+}
+
+.responseNote 
+{
+    font-weight: bold;
+    
+    color: #DAA520;
+}
+
+/* BUSINESS CARD */
+
+.businessCard 
+{
+    grid-column: span 2;
+    
+    max-width: 700px;
+    
+    margin: 40px auto;
+    
+    padding: 30px;
+    
+    display: flex;
+    
+    gap: 20px;
+    
+    background-color: #FFFFFF;
+    
+    border: 3px solid #E6B800;
+    
+    border-radius: 20px;
+    
+    box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+}
+
+/* LEFT */
+
+.businessLeft 
+{
+    flex: 1;
+    
+    padding-right: 20px;
+    
+    border-right: 3px solid #DAA520;
+}
+
+.businessLeft h3 
+{
+    color: #DAA520;
+    
+    font-size: 2rem;
+    
+    margin-bottom: 15px;
+    
+    text-align: center;
+}
+
+.businessLeft p 
+{
+    font-size: 1.2rem;
+    
+    color: #5C4033;
+    
+    margin-bottom: 8px;
+}
+
+.businessLeft a 
+{
+    color: #DAA520;
+    
+    font-weight: bold;
+    
+    text-decoration: none;
+}
+
+.businessLeft a:hover 
+{
+    text-decoration: underline;
+}
+
+/* RIGHT */
+
+.businessRight 
+{
+    display: flex;
+    
+    flex-direction: column;
+    
+    align-items: flex-end;
+    
+    gap: 12px;
+}
+
+.businessLogo 
+{
+    width: 80px;
+    
+    height: auto;
+}
+
+/* SOCIAL ICONS */
+
+.socialIcons 
+{
+    display: flex;
+    
+    flex-direction: column;
+    
+    gap: 14px;
+}
+
+.socialImg 
+{
+    width: 80px;
+    
+    height: auto;
+    
+    filter: brightness(0) saturate(100%)
+           invert(69%) sepia(55%) saturate(450%)
+           hue-rotate(8deg) brightness(104%) contrast(95%);
+    
+           transition: transform 0.3s ease;
+}
+
+.socialIcon:hover .socialImg 
+{
+    transform: scale(1.05);
+}
+
+.followUs h3 
+{
+    color: #DAA520;
+    
+    font-size: 2rem;
+    
+    margin-top: 20px;
+    
+    font-weight: bold;
+    
+    letter-spacing: 0.5px;
+    
+    text-align: center;
+}
+
+/* RESPONSIVE */
+
+@media (max-width: 1200px)
+{
+    .contactPage
+    {
+        padding: 30px 50px;
+
+        gap: 50px;
+    }
+
+        .contactForm 
+    {
+        padding: 28px 20px 35px 20px;  
+    }
+
+    .contactForm button 
+    {
+        margin-top: 18px;
+    }
+
+    .introSection h2 
+    {
+        font-size: 2.4rem;
+    }
+
+    .introSection p 
+    {
+        font-size: 1.4rem;
+    }
+
+}
+
+/* MEDIUM LAPTOPS */
+
+@media (max-width: 1024px) 
+{
+    .contactPage 
+    {
+        grid-template-columns: 1fr;
+
+        padding: 25px 40px;
+
+        gap: 40px;
+    }
+
+    .contactForm 
+    {
+        padding-bottom: 50px;
+    }
+
+    .contactForm button 
+    {
+        margin-top: 16px;
+    }
+
+        .introSection h2 
+    {
+        font-size: 2.2rem;
+    }
+
+    .introSection p 
+    {
+        font-size: 1.3rem;
+    }
+
+    .formLayout 
+    {
+        flex-direction: column;
+
+        gap: 25px;
+    }
+
+    .businessCard 
+    {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .businessLeft 
+    {
+        border-right: none;
+
+        padding-right: 0;
+    }
+
+    .businessRight 
+    {
+        flex-direction: row;
+
+        justify-content: center;
+
+        gap: 15px;
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) 
+{
+    .contactPage 
+    {
+        padding: 20px 30px;
+
+        gap: 30px;
+    }
+
+    .contactForm 
+    {
+        padding-bottom: 55px;
+    }
+
+    .contactForm button 
+    {
+        margin-top: 14px;
+    }
+
+        .introSection h2 
+    {
+        font-size: 2rem;
+    }
+
+    .introSection p 
+    {
+        font-size: 1.2rem;
+    }
+
+    .formLayout 
+    {
+        flex-direction: column;
+
+        gap: 20px;
+    }
+
+    .businessCard 
+    {
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+    }
+
+    .businessRight 
+    {
+        flex-direction: row;
+
+        justify-content: center;
+
+        gap: 12px;
+    }
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 480px) 
+{
+    .contactPage 
+    {
+        padding: 15px 20px;
+
+        gap: 20px;
+    }
+
+    .contactForm 
+    {
+        padding-bottom: 60px;
+    }
+
+    .contactForm button 
+    {
+        margin-top: 12px;
+
+        font-size: 1rem;
+
+        padding: 12px;
+    }
+
+    .introSection h2 
+    {
+        font-size: 1.8rem;
+    }
+
+    .introSection p 
+    {
+        font-size: 1.1rem;
+    }
+
+    .formLayout 
+    {
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .businessCard 
+    {
+        padding: 20px;
+    }
+
+    .businessRight 
+    {
+        flex-direction: column;
+
+        align-items: center;
+        
+        gap: 10px;
+    }
+}
