@@ -11,7 +11,7 @@
 
 body 
 {
-    background-image: url('IMAGES/galleryBackground.jpg');
+    background-image: url('../IMAGES/galleryBackground.jpg');
 
     background-size: cover;
 
@@ -427,4 +427,5 @@ footer
         margin-right: 0;
     }
 }
+
 
