@@ -57,9 +57,9 @@ body
 
 .logoLeft img.LOGO
 {
-    height: 80px;
+    height: auto;
 
-    width: 80px;
+    width: clamp(50px, 6vw, 80px);
 
     object-fit: cover;
 }
@@ -560,13 +560,10 @@ footer
         padding: 20px 40px;
     }
 
-        .logoLeft img.LOGO 
+    .title
     {
-        height: 80px;
-
-        width: 80px;
+        font-size: 1.7rem;
     }
-
 }
 
 @media screen and (max-width: 768px) 
@@ -576,11 +573,9 @@ footer
         padding: 10px 20px;
     }
 
-        .logoLeft img.LOGO 
+    .title 
     {
-        height: 70px;
-
-        width: 70px;
+        font-size: 1.6rem;
     }
 
 }
@@ -589,7 +584,7 @@ footer
 {
     .title
     {
-        font-size: 1.2rem;
+        font-size: 1.4rem;
 
         margin: 0 10px;
 
@@ -606,34 +601,6 @@ footer
     .introCard h2
     {
         font-size: 2rem;
-    }
-
-    .logoLeft
-    {
-        display: flex;
-
-        align-items: center;
-    }
-
-    .logoLeft img.LOGO 
-    {
-        height: 50px;
-
-        width: 50px;
-    }
-
-    .title 
-    {
-        font-size: 1.2rem;
-
-        margin: 0 10px;
-    }
-
-    .hamburgerBTN 
-    {
-        font-size: 1.8rem;
-
-        padding: 5px;
     }
 
     .HEADER 
