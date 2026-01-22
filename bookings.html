@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+  <head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale= 1.0">
+    
+    <title> Bookings • Golden Hour Studios </title>
+
+    <!-- CSS LINKS -->
+
+    <link rel="stylesheet" href="CSS/styleSheet1.css">
+
+    <link rel="stylesheet" href="CSS/styleBookings.css">
+
+    <!-- Font Awesome CDN -->
+        
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css"/>
+
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+
+    <header class="HEADER"> 
+
+      <!-- LOGO -->
+
+      <a href="index.html" class="logoLeft">
+
+        <img src="IMAGES/logo3.png" alt="Golden Hour Studios Logo" class="LOGO">
+
+      </a>
+
+      <!-- TITLE -->
+
+      <h1 class="title"> Bookings </h1>
+
+      <!-- HAMBURGER NAVIGATION -->
+
+      <nav class="burgerNav" aria-label="Main navigation">
+
+        <button
+                
+          class="hamburgerBTN"
+
+          aria-label="Toggle navigation menu"
+
+          aria-expanded="false">
+            
+          &#9776;
+
+        </button>
+
+        <ul class="burgerLinks">
+
+          <li> <a href="index.html"> Home </a> </li>
+
+          <li> <a href="about.html"> About Us </a> </li>
+
+          <li> <a href="gallery.html"> Gallery </a> </li>
+
+          <li> <a href="packages-pricing.html"> Packages & Pricing </a> </li>
+
+          <li> <a href="events.html"> Events </a> </li>
+
+          <li> <a href="contact.html"> Contact Us </a> </li>
+
+          <li> <a href="testimonials-reviews.html"> Testimonials & Reviews </a> </li>
+
+          <li> <a href="terms-privacy.html"> Terms & Privacy </a> </li>
+
+          <li> <a href="cart.html"> Cart </a> </li>
+
+        </ul>
+
+      </nav>
+
+    </header>
+
+    <!-- MAIN -->
+
+    <main class="dummyBookingFlow">
+
+      <!-- STEP 1: PACKAGE -->
+
+      <section class="dummyStep dummyVisible" id="dummy-step-package">
+
+        <div class="dummyInner">
+  
+          <h2>Select a Package</h2>
+
+          <select id="dummyPackageSelect">
+    
+            <option value="">-- Choose a Package --</option>
+    
+            <option value="wedding" data-price="1200">Wedding Package</option>
+    
+            <option value="birthday" data-price="350">Birthday Party</option>
+    
+            <option value="corporate" data-price="500">Corporate Event</option>
+    
+            <option value="newborn" data-price="400">Newborn Session</option>
+    
+            <option value="graduation" data-price="300">Graduation Package</option>
+    
+            <option value="Golden Hour Session" data-price="250">Golden Hour Session</option>
+    
+            <option value="Portrait Package" data-price="400">Portrait Package</option>
+    
+            <option value="hourly" data-price="170">Standard Hourly Session</option>
+  
+          </select>
+
+        </div>
+
+      </section>
+
+      <!-- STEP 2: DATE -->
+      
+      <section class="dummyStep" id="dummy-step-date">
+  
+        <div class="dummyInner">
+    
+          <button class="dummyBackBtn" data-back="package">← Back to Packages</button>
+    
+          <h2>Select a Date</h2>
+
+          <div class="dummyCalendarNav">
+      
+            <button id="dummyPrevMonth">‹</button>
+      
+            <span id="dummyMonthLabel"></span>
+      
+            <button id="dummyNextMonth">›</button>
+    
+          </div>
+
+          <div id="dummyCalendarGrid" class="dummyCalendarGrid"></div>
+  
+        </div>
+
+      </section>
+
+      <!-- STEP 3: TIME -->
+  
+      <section class="dummyStep" id="dummy-step-time">
+    
+        <div class="dummyInner">
+      
+          <button class="dummyBackBtn" data-back="date">← Back to Dates</button>
+
+          <h2>Select a Time</h2>
+
+          <select id="dummyTimeSelect">
+        
+            <option value="">-- Choose a Time --</option>
+        
+            <option>9:00 AM</option>
+        
+            <option>11:00 AM</option>
+        
+            <option>1:00 PM</option>
+        
+            <option>3:00 PM</option>
+        
+            <option>5:00 PM</option>
+        
+            <option>7:00 PM</option>
+      
+          </select>
+
+          <button id="dummyAddToCartBtn" class="dummyAddBtn">
+        
+            Add to Cart
+      
+          </button>
+    
+        </div>
+  
+      </section>
+
+    </main>
+
+    <!-- CART ICON -->
+
+    <a href="cart.html" id="dummyCartIcon" class="dummyCartIcon">
+  
+      <i class="fas fa-shopping-bag"></i>
+  
+      <span class="dummyCartBadge">0</span>
+
+    </a>
+
+    <footer class="footer">
+
+      © 2025 Golden Hour Studios — All Rights Reserved
+
+    </footer>
+
+    <!-- JS -->
+
+    <script src="JS/mainJS.js"></script>
+
+    <script src="JS/bookingsJS.js"></script>
+
+  </body>    
+
+</html>

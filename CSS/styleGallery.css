@@ -1,0 +1,429 @@
+/** UNIVERSAL RESET & BODY STYLING **/
+
+*
+{
+   margin: 0; 
+
+   padding: 0;
+
+   box-sizing: border-box;
+}
+
+body 
+{
+    background-image: url('IMAGES/galleryBackground.jpg');
+
+    background-size: cover;
+
+    background-position: center top;
+
+    background-repeat: no-repeat;
+
+    background-attachment: fixed;
+
+    color: #5C4033;
+
+    font-size: 18px;
+
+    font-family: Georgia, 'Times New Roman', 'Arial', sans-serif;
+}
+
+body::before 
+{
+    content: "";
+
+    position: fixed;
+
+    top: 0; left: 0;
+
+    width: 100%; height: 100%;
+
+    background-color: rgba(0,0,0,0.3);
+
+    z-index: 0;
+}
+
+main, footer 
+{
+    position: relative;
+
+    z-index: 1;
+}
+
+/** LOGO **/
+
+.logoContainer .logo 
+{
+    height: 80px;
+
+    width: 80px;
+
+    object-fit: contain;
+}
+
+/** HEADER & NAVIGATION **/
+
+.galleryHeader 
+{
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    width: 100%;
+
+    padding: 10px 40px;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    z-index: 10;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+}
+
+/** MAIN NAVIGATION CONTAINER **/
+
+.mainNav 
+{
+    flex: 0 1 auto; 
+
+    display: flex;
+
+    justify-content: center;
+
+    margin-top: 25px;
+}
+
+/** NAVIGATION BUTTONS **/
+
+.mainButtons 
+{
+    display: flex;
+
+    list-style: none;
+
+    gap: 210px; 
+
+    margin: 0;
+
+    padding: 0;
+}
+
+.mainButtons li a 
+{
+    color: white;
+
+    font-weight: bold;
+
+    font-size: 1.4rem;
+
+    text-decoration: none;
+
+    transition: color 0.3s ease;
+
+    font-family: 'Georgia, serif';
+}
+
+.mainButtons li a:hover 
+{
+    color: #000000; 
+}
+
+/** HAMBURGER MENU **/
+
+.hamburgerMenu 
+{
+    position: relative;
+
+    display: flex;
+
+    align-items: center;
+}
+
+.hamburgerMenu button 
+{
+    font-size: 2rem;
+
+    background: none;
+
+    border: none;
+
+    color: white;
+
+    cursor: pointer;
+
+    letter-spacing: -2px; 
+
+    z-index: 2100;
+
+    transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.hamburgerMenu button:hover 
+{
+    color: #B8961D;  
+
+    transform: scale(1.15);    
+}
+
+.hamburgerMenu .dropdown 
+{
+    list-style: none;
+
+    margin: 0;
+
+    padding: 90px 0 0;
+
+    display: flex; 
+
+    flex-direction: column;
+    
+    position: fixed;
+    
+    top: 0;
+    
+    right: 0;
+    
+    width: 320px;
+    
+    max-height: 100vh;
+    
+    background-color: #FFFFFF;
+    
+    border-left: 3px solid #E6B800;
+    
+    border-bottom: 3px solid #DAA520;
+    
+    transform: translateX(100%); 
+    
+    transition: transform 0.35s ease;
+    
+    z-index: 1500;
+}
+
+/* When open, slide in */
+
+.hamburgerMenu .dropdown.open 
+{
+    transform: translateX(0);
+}
+
+.hamburgerMenu .dropdown li 
+{
+    width: 100%;
+}
+
+.hamburgerMenu .dropdown li a 
+{
+    display: block;
+    
+    text-decoration: none;
+    
+    font-weight: bold;
+    
+    color: #DAA520;            
+    
+    text-align: center;
+    
+    padding: 18px 0;
+    
+    border-top: 1px solid #DAA520;
+    
+    border-bottom: 1px solid #DAA520;
+    
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.hamburgerMenu .dropdown li:last-child a 
+{
+    border-bottom: none;
+}
+
+/* Hover effect for dropdown links */
+
+.hamburgerMenu .dropdown li a:hover 
+{
+    background-color: #DAA520;
+
+    color: #FFFFFF;
+}
+
+/** GALLERY SLIDER **/
+
+.galleryHero 
+{
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    min-height: 100vh;
+
+    padding: 60px;
+
+    position: relative;
+}
+
+.gallerySlider 
+{
+    position: relative;
+
+    width: 90%;
+
+    max-width: 1000px;
+
+    height: 225px;
+
+    margin: 0 auto;
+}
+
+.slide 
+{
+    display: flex;
+
+    justify-content: flex-start;
+
+    width: 100%;
+
+    height: 100%;
+
+    position: absolute;
+
+    top: 0;
+
+    left: 0;
+
+    opacity: 0;
+
+    transition: opacity 3s ease-in-out;
+}
+
+.slide.active 
+{
+    opacity: 1;
+}
+
+.slide img 
+{
+    width: 25%;
+
+    height: 150%;
+
+    object-fit: cover;
+
+    border-radius: 8px;
+
+    margin-left: 6.2%;
+}
+
+.slide img:last-child 
+{
+    margin-right: 0;
+}
+
+/** FOOTER **/
+
+footer 
+{
+    position: fixed;
+
+    bottom: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    padding-bottom: 5px; 
+
+    text-align: center;
+
+    color: white;
+
+    background: transparent;
+
+    border: none;
+
+    box-shadow: none;
+    
+    z-index: 2;
+}
+
+/** RESPONSIVE ADJUSTMENT FOR GALLERY **/
+
+@media (max-width: 1200px) 
+{
+    .mainButtons 
+    {
+        gap: 150px;
+    }
+
+    .slide img 
+    {
+        max-height: 300px;
+    }
+}
+
+/* MEDIUM LAPTOPS */
+
+@media (max-width: 1024px) 
+{
+    .mainButtons 
+    {
+        gap: 130px;
+    }
+
+    .slide img 
+    {
+        max-height: 280px;
+    }
+}
+
+/* TABLETS */
+
+@media (max-width: 768px) 
+{
+    .mainButtons 
+    {
+        gap: 80px;
+    }
+
+    .slide img 
+    {
+        max-height: 220px;
+    }
+}
+
+/* MOBILE PHONES */
+
+@media (max-width: 480px) 
+{
+    .mainButtons 
+    {
+        flex-direction: column;
+
+        gap: 20px;
+
+        align-items: center;
+    }
+
+    .slide img 
+    {
+        max-height: 150px;
+
+        width: 80%;
+
+        margin-left: 0;
+        
+        margin-right: 0;
+    }
+}

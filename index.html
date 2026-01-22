@@ -1,0 +1,321 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Home • Golden Hour Studios </title>
+
+        <!-- CSS link -->
+
+        <link rel="stylesheet" href="CSS/styleSheet1.css">
+
+    </head>
+
+    <body>
+
+        <!-- HEADER -->
+
+        <header class="HEADER">
+
+            <!-- LOGO -->
+
+            <a href="index.html" class="logoLeft">
+
+                <img src="IMAGES/logo3.png" alt="Golden Hour Studios Logo" class="LOGO"> 
+
+            </a>
+
+            <!-- TITLE -->
+
+            <h1 class="title"> Golden Hour Studios </h1>
+
+
+            <!-- HAMBURGER NAVIGATION -->
+
+            <nav class="burgerNav" aria-label="Main navigation">
+
+                <button
+                    
+                    class="hamburgerBTN"
+
+                    aria-label="Toggle navigation menu"
+
+                    aria-expanded="false">
+
+                    &#9776;
+
+                </button>
+
+                    <ul class="burgerLinks">
+
+                        <li> <a href="about.html"> About Us </a> </li>
+
+                        <li> <a href="gallery.html"> Gallery </a> </li>
+
+                        <li> <a href="packages-pricing.html"> Packages & Pricing </a> </li>
+
+                        <li> <a href="bookings.html"> Bookings </a> </li>
+
+                        <li> <a href="events.html"> Events</a> </li>
+
+                        <li> <a href="contact.html"> Contact Us </a> </li>
+
+                        <li> <a href="testimonials-reviews.html"> Testimonials & Reviews </a> </li>
+
+                        <li> <a href="terms-privacy.html"> Terms & Privacy </a> </li>
+
+                        <li> <a href="cart.html"> Cart </a> </li>
+
+                    </ul>
+
+            </nav>
+
+        </header>
+
+        <!-- MAIN CONTENT -->
+
+        <main>
+
+            <!-- HERO SLIDER -->
+             
+            <section class="heroSlider" aria-label="Featured images">
+
+                <h2 class="visuallyHidden"> Featured images </h2>
+
+                <ul class="slides">
+
+                    <li class="slide">
+
+                        <img src="IMAGES/slider-image1.jpg" alt="Sunset portrait session">
+
+                    </li>
+
+                    <li class="slide">
+
+                        <img src="IMAGES/slider-image2.jpg" alt="Outdoor couple photo in the golden hour">
+
+                    </li>
+
+                    <li class="slide">
+
+                        <img src="IMAGES/slider-image3.jpg" alt="Studio photography setup">
+
+                    </li>
+
+                    <li class="slide">
+
+                        <img src="IMAGES/slider-image4.jpg" alt="Creative lighting portrait">
+
+                    </li>
+
+                    <li class="slide">
+
+                        <img src="IMAGES/slider-image5.jpg" alt="Creative lighting portrait">
+
+                    </li>
+
+                                        <li class="slide">
+
+                        <img src="IMAGES/slider-image6.jpg" alt="Creative lighting portrait">
+
+                    </li>
+
+                                        <li class="slide">
+
+                        <img src="IMAGES/slider-image7.jpg" alt="Creative lighting portrait">
+
+                    </li>
+
+                                        <li class="slide">
+
+                        <img src="IMAGES/slider-image8.jpg" alt="Creative lighting portrait">
+
+                    </li>
+
+                </ul>
+
+                <!-- MANUAL SLIDER BUTTONS -->
+
+                <button class="arrow left" aria-label="Previous slide"> &#10094; </button>
+
+                <button class="arrow right" aria-label="Next slide"> &#10095; </button>
+
+            </section>
+
+            <!-- FULL VIEWPORT INTRO SECTION -->
+
+            <section class="introCard">
+    
+                <h2>Capturing the Golden Hour</h2>
+    
+                <p>
+                    We specialize in breathtaking photography and cinematic storytelling,
+                    bringing your vision to life during the perfect light. Scroll to see our offered services.
+    
+                </p>
+
+            </section>
+
+            <!-- SERVICE CARDS -->
+
+            <section class="serviceCards" aria-labelledby="serviceHeading">
+    
+                <h2 id="serviceHeading" class="visuallyHidden">Our Services</h2>
+    
+                <ul class="serviceList">
+        
+                    <li class="service">
+            
+                        <a href="about.html" class="serviceLink">
+                
+                            <h3>About Us</h3>
+                
+                            <p>
+                                Learn about our story, our mission, and how we capture the perfect golden hour in every shot.
+                            </p>
+                
+                        </a>
+        
+                    </li>
+
+                    <li class="service">
+            
+                        <a href="gallery.html" class="serviceLink">
+                
+                            <h3>Our Gallery</h3>
+                
+                            <p>
+                                Professional photography for portraits, events, and commercial
+                                projects with an eye for golden hour lighting.
+                            </p>
+            
+                        </a>
+        
+                    </li>
+
+                    <li class="service">
+            
+                        <a href="packages-pricing.html" class="serviceLink">
+                
+                            <h3>Packages & Pricing</h3>
+                
+                            <p>
+                                Flexible packages designed to fit weddings, outdoor sessions,
+                                special events, and any and all photo shooting ideas.
+                            </p>
+            
+                        </a>
+        
+                    </li>
+
+                    <li class="service">
+            
+                        <a href="bookings.html" class="serviceLink">
+                
+                            <h3>Book Your Photoshoot Today</h3>
+                
+                            <p>
+                                Easy scheduling for photography sessions and events
+                                with professional support.
+                            </p>
+            
+                        </a>
+        
+                    </li>
+
+                </ul>
+
+            </section>
+
+        </main>
+
+        <footer class="footer">
+
+            © 2025 Golden Hour Studios — All Rights Reserved
+
+        </footer>
+
+        <script src="JS/mainJS.js" defer> </script>
+
+        <script>
+ 
+            // HERO LOGIC 
+
+            document.addEventListener("DOMContentLoaded", () => 
+            {
+                const slidesContainer = document.querySelector(".slides");
+    
+                const slides = document.querySelectorAll(".slide");
+    
+                const prevBtn = document.querySelector(".arrow.left");
+    
+                const nextBtn = document.querySelector(".arrow.right");
+
+                let currentIndex = 0;
+    
+                const slideCount = slides.length;
+    
+                const intervalTime = 4000;
+    
+                let autoSlide;
+
+                function updateSlidePosition() 
+                {
+                    slidesContainer.style.transform = `translateX(-${currentIndex * 100}%)`;
+                }
+
+                function nextSlide() 
+                {
+                    currentIndex = (currentIndex + 1) % slideCount;
+        
+                    updateSlidePosition();
+                }
+
+                function prevSlide() 
+                {
+                    currentIndex = (currentIndex - 1 + slideCount) % slideCount;
+        
+                    updateSlidePosition();
+                }
+
+                function startAutoSlide() 
+                {
+                    autoSlide = setInterval(nextSlide, intervalTime);
+                }
+
+                function resetAutoSlide() 
+                {
+                    clearInterval(autoSlide);
+        
+                    startAutoSlide();
+                }
+
+                nextBtn.addEventListener("click", () => 
+                {
+                    nextSlide();
+        
+                    resetAutoSlide();
+                });
+
+                prevBtn.addEventListener("click", () => 
+                {
+                    prevSlide();
+        
+                    resetAutoSlide();
+                });
+
+                startAutoSlide();
+
+            });
+
+        </script>
+
+    </body>
+
+</html>
+

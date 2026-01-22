@@ -1,0 +1,219 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+    <head>
+
+        <meta charset="UTF-8">
+
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <title> Packages & Pricing • Golden Hour Studios </title>
+
+        <!-- CSS LINK -->
+
+        <link rel="stylesheet" href="CSS/style-packages-pricing.css">
+
+    </head>
+
+    <body>
+
+        <!--HEADER -->
+
+        <header class="header">
+
+            <h1> Packages & Pricing </h1>
+
+            <img src="IMAGES/logo4.png" class="logo" alt="Golden Hour Logo">
+
+            <!-- NAVIGATION -->
+
+            <nav class="nav">
+
+                <div class="hamburger">☰</div>
+
+                <!-- SLIDE OUT PANEL -->
+
+                <div class="navLinks">
+
+                    <a href="about.html"> About Us </a>
+
+                    <a href="gallery.html"> Gallery </a>
+
+                    <a href="bookings.html"> Bookings </a>
+
+                    <a href="events.html"> Events </a>
+
+                    <a href="contact.html"> Contact Us </a>
+
+                    <a href="testimonials-reviews.html"> Testimonials & Reviews </a>
+                                        
+                    <a href="terms-privacy.html"> Terms & Privacy </a>
+
+                    <a href="cart.html"> Cart </a>
+
+                </div>
+
+            </nav>
+
+        </header>
+
+        <div class="backHomeWrapper">
+
+            <a href="index.html" class="backHomeBtn"> Home </a>
+
+        </div>
+    
+        <!-- NAIN CONTENT-->
+
+        <main>
+
+            <section class="gridGallery">
+
+                <img src="IMAGES/bronzePackage.jpg" alt=" Gallery Sample Photo 1">
+
+                <img src="IMAGES/silverPackage.jpg" alt="Gallery Sample Photo 2">
+
+                <img src="IMAGES/goldPackage.jpg" alt="Gallery Sample Photo 3">
+
+                <img src="IMAGES/weddingEvents.jpg" alt="Gallery Sample Photo 4">
+
+                <img src="IMAGES/outdoorEvents.jpg" alt="Gallery Sample Photo 5">
+
+                <img src="IMAGES/specialEvents.jpg" alt="Gallery Sample Photo 6">
+
+            </section>
+
+            <!-- INFO SECTION -->
+
+            <div class="packagesInfo">
+        
+                <p>
+                    Our standard photography sessions are priced based on the duration and type of event.
+                </p>
+                
+                <p>
+                    Hourly rates start at <strong>$170/hour</strong> for single sessions. 
+                </p>
+                
+                <p>
+                    Longer sessions can be customized to fit your schedule and needs.
+                </p>
+
+                <p>
+                    We offer flexible booth setups for all events. Choose from classic, themed, or open-air booths. Booth changes 
+                    during the event can be accommodated for an additional fee of <strong>$50 per change</strong>.
+                </p>
+        
+                <p>
+                    Special event packages include weddings, birthdays, formals, reunions, 
+                    graduations, newborn shoots, corporate parties, and private celebrations.
+                </p>
+
+                <p>
+                    Wedding coverage starts at <strong>$1200</strong> for up to 5 hours, 
+                    with optional add-ons such as photo albums, extra prints, or on-site editing.
+                </p>
+
+                <p>
+                    Corporate events start at <strong>$500</strong> for up to 
+                    3 hours, including digital delivery of all images.
+                </p>
+
+                <p>
+                    Birthday parties start at <strong>$350</strong> for up to 
+                    2 hours, with optional photo prints or digital albums.
+                </p>
+
+                <p>
+                    Formals (proms, dances) start at <strong>$400</strong> 
+                    for up to 3 hours, including group and solo shots.
+                </p>
+
+                <p>
+                    Reunions start at <strong>$450</strong> for up to 
+                    3 hours, with group photos and digital delivery.
+                </p>
+
+                <p>
+                    Graduations start at <strong>$300</strong> for up to 
+                    2 hours, covering ceremonies and portraits.
+                </p>
+
+                <p>Newborn shoots start at <strong>$400</strong> for up to 
+                    2 hours, including basic props and digital images.
+                </p>
+
+                <p>Private celebrations start at <strong>$350</strong> for up to 
+                    2 hours, with custom coverage per client request.
+                </p>
+        
+                <p>
+                    Additional services include professional lighting setups, props, green screen backgrounds, and instant social media sharing options. 
+                </p>
+
+                <p>
+                    Our team is happy to tailor packages for any special occasion, ensuring you get a memorable experience without exceeding your budget.
+                </p>
+    
+            </div>
+
+        </main>
+
+        <!-- FOOTER -->
+             
+        <footer>
+
+            <p> © 2025 Golden Hour Studios — All Rights Reserved </p>
+
+        </footer>
+
+         <script>
+            
+            document.addEventListener("DOMContentLoaded", () => 
+            {
+                const hamburger = document.querySelector(".hamburger");
+    
+                const navLinks = document.querySelector(".navLinks");
+
+                if (!hamburger || !navLinks) return;
+
+                // Toggle panel
+    
+                hamburger.addEventListener("click", () => 
+                {
+                    const isOpen = navLinks.classList.toggle("open");
+
+                    // Swap icon and color
+        
+                    hamburger.textContent = isOpen ? "✖" : "☰"; // X or burger
+        
+                    hamburger.style.color = isOpen ? "#000000" : "#DAA520"; // black X, gold burger
+
+                    // Accessibility
+        
+                    hamburger.setAttribute("aria-expanded", isOpen);
+                });
+
+                // Close panel when a link is clicked
+    
+                navLinks.querySelectorAll("a").forEach(link => 
+                {
+                    link.addEventListener("click", () => 
+                    {
+                        navLinks.classList.remove("open");
+            
+                        hamburger.textContent = "☰"; // Reset to burger
+            
+                        hamburger.style.color = "#DAA520"; // Reset color
+            
+                        hamburger.setAttribute("aria-expanded", false);
+                    });
+                });
+            });
+        
+        </script>
+
+    </body>
+
+</html>
