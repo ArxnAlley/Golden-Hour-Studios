@@ -606,6 +606,13 @@ footer
         font-size: 2rem;
     }
 
+    .logoLeft
+    {
+        display: flex;
+
+        align-items: center;
+    }
+
     .logoLeft img.LOGO 
     {
         height: 50px;
