@@ -28,6 +28,8 @@ body
 
 .HEADER
 {
+    --header-height: 110px;
+
     position: fixed;
 
     top: 0;
@@ -51,6 +53,8 @@ body
     z-index: 1000;
 
     box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+
+    height: var(--header-height);
 }
 
 /* LOGO */
@@ -222,9 +226,9 @@ body
 
 .heroSlider
 {
-    margin-top: 110px;
+    margin-top: var(--header-height);
     
-    height: calc(100vh - 110px);
+    height: calc(100vh - var(--header-height));
 
     max-height: 80vh;
 
@@ -545,6 +549,11 @@ footer
 
 @media screen and (max-width: 1024px)
 {
+    .HEADER
+    {
+        --header-height: 80px;
+    }
+
     .serviceList
     {
         align-items: center;
@@ -558,6 +567,10 @@ footer
     .heroSlider 
     {
         padding: 20px 40px;
+
+        margin-top: var(--header-height);
+
+        height: calc(100vh - var(--header-height));
     }
 
     .title
@@ -568,9 +581,18 @@ footer
 
 @media screen and (max-width: 768px) 
 {
+    .HEADER
+    {
+        --header-height: 70px;
+    }
+
     .heroSlider 
     {
         padding: 10px 20px;
+
+        margin-top: var(--header-height);
+
+        height: calc(100vh - var(--header-height));
     }
 
     .title 
@@ -582,6 +604,26 @@ footer
 
 @media screen and (max-width: 600px)
 {
+    .HEADER 
+    {
+        --header-height: 60px;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        align-items: center;
+    }
+
+    .heroSlider
+    {
+        padding: 20px;
+
+        margin-top: var(--header-height);
+
+        height: calc(100vh - var(--header-height));
+    }
+
     .title
     {
         font-size: 1.4rem;
@@ -602,14 +644,6 @@ footer
     {
         font-size: 2rem;
     }
-
-    .HEADER 
-    {
-        flex-wrap: wrap;
-
-        gap: 10px;
-
-        align-items: center;
-    }
+    
 }
 
