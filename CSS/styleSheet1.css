@@ -559,6 +559,14 @@ footer
     {
         padding: 20px 40px;
     }
+
+        .logoLeft img.LOGO 
+    {
+        height: 80px;
+
+        width: 80px;
+    }
+
 }
 
 @media screen and (max-width: 768px) 
@@ -567,6 +575,14 @@ footer
     {
         padding: 10px 20px;
     }
+
+        .logoLeft img.LOGO 
+    {
+        height: 60px;
+
+        width: 60px;
+    }
+
 }
 
 @media screen and (max-width: 600px)
