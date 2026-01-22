@@ -585,5 +585,35 @@ footer
     {
         font-size: 2rem;
     }
+
+    .logoLeft img.LOGO 
+    {
+        height: 80px;
+
+        width: 80px;
+    }
+
+    .title 
+    {
+        font-size: 1.2rem;
+
+        margin: 0 10px;
+    }
+
+    .hamburgerBTN 
+    {
+        font-size: 1.8rem;
+
+        padding: 5px;
+    }
+
+    .HEADER 
+    {
+        flex-wrap: wrap;
+
+        gap: 10px;
+
+        align-items: center;
+    }
 }
 
