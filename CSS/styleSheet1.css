@@ -28,7 +28,7 @@ body
 
 .HEADER
 {
-    --header-height: 110px;
+    --header-height: 80px;
 
     position: fixed;
 
@@ -644,6 +644,6 @@ footer
     {
         font-size: 2rem;
     }
-    
+
 }
 
