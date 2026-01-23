@@ -63,9 +63,13 @@ body
 {
     height: auto;
 
-    width: clamp(50px, 6vw, 80px);
+    width: clamp(50px, 6vw, 60px);
 
     object-fit: cover;
+
+    align-items: center;
+
+    display: flex;
 }
 
 /* TITLE */
@@ -226,11 +230,9 @@ body
 
 .heroSlider
 {
-    margin-top: var(--header-height);
-    
-    height: calc(100vh - var(--header-height));
+    margin-top: 80px;
 
-    max-height: 80vh;
+    height: 80vh;
 
     width: 100%;
 
@@ -568,9 +570,9 @@ footer
     {
         padding: 20px 40px;
 
-        margin-top: var(--header-height);
+        margin-top: 80px;
 
-        height: calc(100vh - var(--header-height));
+        height: 80vh;
     }
 
     .title
@@ -583,16 +585,16 @@ footer
 {
     .HEADER
     {
-        --header-height: 70px;
+        --header-height: 80px;
     }
 
     .heroSlider 
     {
         padding: 10px 20px;
 
-        margin-top: var(--header-height);
+        margin-top: 70px;
 
-        height: calc(100vh - var(--header-height));
+        height: 80vh;
     }
 
     .title 
@@ -606,7 +608,7 @@ footer
 {
     .HEADER 
     {
-        --header-height: 60px;
+        --header-height: 80px;
 
         flex-wrap: wrap;
 
@@ -619,9 +621,16 @@ footer
     {
         padding: 20px;
 
-        margin-top: var(--header-height);
+        margin-top: 60px;
 
-        height: calc(100vh - var(--header-height));
+        height: 80vh;
+    }
+
+    .arrow
+    {
+        font-size: 1.2rem;
+
+        padding: 6px;
     }
 
     .title
