@@ -125,7 +125,7 @@ body
 {
     position: fixed;
     
-    top: 0;
+    top: 80px;
     
     right: 0;
     
@@ -137,21 +137,11 @@ body
     
     background-color: #FFFFFF;
     
-    border-left: 3px solid #E6B800;
+    border-left: 3px solid #DAA520;
     
     border-bottom: 3px solid #DAA520;
     
     list-style: none;
-    
-    padding: 90px 0 0;
-    
-    display: flex;
-    
-    flex-direction: column;
-    
-    gap: 0;
-
-    /* START HIDDEN OFFSCREEN */
 
     transform: translateX(100%);
     
@@ -625,13 +615,17 @@ footer
 
         height: auto;
 
-        max-height: 100vh;
+        max-height: calc(100vh - 80px);
 
-        padding-top: 80px;
+        top: 80px;
+
+        padding-top: 0;
 
         overflow-y: auto;
 
         box-sizing: border-box;
+
+        border-top: none;
     }
 
     .burgerLinks li a 
