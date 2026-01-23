@@ -621,7 +621,7 @@ footer
     {
         padding: 0;
 
-        margin-top: 60px;
+        margin-top: 80px;
 
         height: 80vh;
     }
@@ -654,13 +654,13 @@ footer
 
     .slide img
     {
+        max-height: 90%;
+
         width: 100%;
 
         height: auto;
 
         object-fit: contain;
-
-        display: block;
     }
 
     .arrow
