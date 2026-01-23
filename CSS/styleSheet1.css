@@ -617,6 +617,30 @@ footer
         align-items: center;
     }
 
+    .burgerLinks
+    {
+        width: 85vh;
+
+        max-width: 320px;
+
+        height: auto;
+
+        max-height: 100vh;
+
+        padding-top: 80px;
+
+        overflow-y: auto;
+
+        box-sizing: border-box;
+    }
+
+    .burgerLinks li a 
+    {
+        padding: 14px 0;
+
+        font-size: 1rem;
+    }
+
     .heroSlider
     {
         padding: 0;
