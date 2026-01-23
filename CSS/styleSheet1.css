@@ -651,7 +651,14 @@ footer
 
     .introCard h2
     {
-        font-size: 2rem;
+        font-size: 2.5rem;
+    }
+
+    .introCard p 
+    {
+        font-size: 1.6rem;
+
+        line-height: 2;
     }
 
 }
