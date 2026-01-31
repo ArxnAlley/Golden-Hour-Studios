@@ -274,30 +274,73 @@ footer
 
 /* RESPONSIVE STYLING */
 
-@media (max-width: 900px) 
+@media (max-width: 1024px) 
 {
     .aboutMain 
     {
         flex-direction: column;
         
         align-items: center;
+        
+        gap: 30px;
     }
 
-    .leftColumn,
-    .rightColumn,
+    /* Reorder children to alternate cards and images */
+    .leftColumn 
+    {
+        display: contents;
+    }
+
+    .rightColumn 
+    {
+        display: contents;
+    }
+
     .centerImage 
+    {
+        display: contents;
+    }
+
+    /* Individual cards and images take full width */
+    .card,
+    .centerImage img 
     {
         width: 100%;
         
-        max-width: 500px;
+        max-width: 700px;
     }
-}
 
-@media (max-width: 600px) 
-{
-    .logo 
+    /* Use order property to interleave cards and images */
+    .whyUsCard { order: 1; }
+    .centerImage img:nth-child(1) { order: 2; }
+    .aboutUsCard { order: 3; }
+    .centerImage img:nth-child(2) { order: 4; }
+    .styleCard { order: 5; }
+    .centerImage img:nth-child(3) { order: 6; }
+    .trustCard { order: 7; }
+    .centerImage img:nth-child(4) { order: 8; }
+    .clientCard { order: 9; }
+    .missionCard { order: 10; }
+    .communityCard { order: 11; }
+    .futureCard { order: 12; }
+    .improvingCard { order: 13; }
+    .testimonialsCard { order: 14; }
+    .awardsCard { order: 15; }
+
+    .navButtons ul 
     {
-        width: 130px;
+        gap: 20px;
+        
+        flex-wrap: wrap;
+        
+        justify-content: center;
+    }
+
+    .navButtons a 
+    {
+        padding: 8px 15px;
+        
+        font-size: 0.95rem;
     }
 
     .title 
@@ -305,10 +348,267 @@ footer
         font-size: 1.7rem;
     }
 
+    .leftLogo,
+    .rightLogo 
+    {
+        width: 70px;
+        
+        height: 70px;
+    }
+
+    .card 
+    {
+        padding: 18px;
+    }
+
+    .card h3 
+    {
+        font-size: 1.3rem;
+    }
+
+    .card p 
+    {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) 
+{
+    .about-header 
+    {
+        height: 90px;
+        
+        padding: 8px 15px;
+    }
+
+    .leftLogo,
+    .rightLogo 
+    {
+        width: 60px;
+        
+        height: 60px;
+    }
+
+    .leftLogo { margin-right: 10px; }
+    
+    .rightLogo { margin-left: 10px; }
+
+    .title 
+    {
+        font-size: 1.5rem;
+    }
+
+    .navButtons 
+    {
+        padding: 10px 0;
+        
+        margin-top: 15px;
+    }
+
+    .navButtons ul 
+    {
+        gap: 15px;
+    }
+
+    .navButtons a 
+    {
+        padding: 8px 12px;
+        
+        font-size: 0.9rem;
+    }
+
+    .gradientBackground 
+    {
+        padding: 0 15px 30px 15px;
+    }
+
+    .aboutMain 
+    {
+        margin-top: 40px;
+        
+        gap: 25px;
+    }
+
+    .card 
+    {
+        padding: 16px;
+    }
+
+    .card h3 
+    {
+        font-size: 1.2rem;
+        
+        margin-bottom: 0.8rem;
+    }
+
+    .card p 
+    {
+        font-size: 0.95rem;
+        
+        text-indent: 15px;
+    }
+}
+
+@media (max-width: 600px) 
+{
+    body 
+    {
+        font-size: 16px;
+    }
+
+    .about-header 
+    {
+        height: 80px;
+        
+        padding: 5px 10px;
+        
+        flex-wrap: nowrap;
+    }
+
+    .leftLogo,
+    .rightLogo 
+    {
+        width: 50px;
+        
+        height: 50px;
+    }
+
+    .leftLogo { margin-right: 5px; }
+    
+    .rightLogo { margin-left: 5px; }
+
+    .title 
+    {
+        font-size: 1.2rem;
+        
+        line-height: 1.2;
+        
+        padding: 0 5px;
+    }
+
+    .navButtons 
+    {
+        padding: 8px 0;
+        
+        margin-top: 10px;
+    }
+
     .navButtons ul 
     {
         flex-direction: column;
         
         gap: 10px;
+        
+        width: 100%;
+        
+        padding: 0 10px;
+    }
+
+    .navButtons a 
+    {
+        display: block;
+        
+        width: 100%;
+        
+        max-width: 300px;
+        
+        margin: 0 auto;
+        
+        padding: 10px 15px;
+        
+        font-size: 0.9rem;
+        
+        text-align: center;
+    }
+
+    .gradientBackground 
+    {
+        padding: 0 10px 25px 10px;
+    }
+
+    .aboutMain 
+    {
+        margin-top: 30px;
+        
+        gap: 20px;
+    }
+
+    .card 
+    {
+        padding: 15px;
+        
+        border-radius: 8px;
+    }
+
+    .card h3 
+    {
+        font-size: 1.1rem;
+        
+        margin-bottom: 0.7rem;
+    }
+
+    .card p 
+    {
+        font-size: 0.9rem;
+        
+        line-height: 1.5;
+        
+        text-indent: 10px;
+        
+        margin-bottom: 0.8rem;
+    }
+
+    .whyUsCard ul li 
+    {
+        font-size: 0.9rem;
+        
+        margin-bottom: 0.4rem;
+    }
+
+    .centerImage img 
+    {
+        border-radius: 8px;
+        
+        border-width: 1px;
+    }
+
+    footer 
+    {
+        padding: 12px 0;
+        
+        font-size: 0.85rem;
+    }
+}
+
+@media (max-width: 400px) 
+{
+    .title 
+    {
+        font-size: 1rem;
+    }
+
+    .leftLogo,
+    .rightLogo 
+    {
+        width: 45px;
+        
+        height: 45px;
+    }
+
+    .navButtons a 
+    {
+        font-size: 0.85rem;
+        
+        padding: 8px 12px;
+    }
+
+    .card h3 
+    {
+        font-size: 1rem;
+    }
+
+    .card p 
+    {
+        font-size: 0.85rem;
     }
 }

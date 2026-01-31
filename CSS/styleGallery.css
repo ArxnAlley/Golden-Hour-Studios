@@ -1,4 +1,3 @@
-
 /** UNIVERSAL RESET & BODY STYLING **/
 
 *
@@ -16,7 +15,7 @@ body
 
     background-size: cover;
 
-    background-position: center top;
+    background-position: center center;
 
     background-repeat: no-repeat;
 
@@ -27,6 +26,8 @@ body
     font-size: 18px;
 
     font-family: Georgia, 'Times New Roman', 'Arial', sans-serif;
+
+    min-height: 100vh;
 }
 
 body::before 
@@ -182,7 +183,6 @@ main, footer
     
     position: fixed;
 
-    
     top: 80px;
     
     right: 0;
@@ -278,7 +278,11 @@ main, footer
 
     max-width: 1000px;
 
-    height: 225px;
+    height: 15vh;
+
+    min-height: 180px;
+
+    max-height: 250px;
 
     margin: 0 auto;
 }
@@ -313,7 +317,9 @@ main, footer
 {
     width: 25%;
 
-    height: 150%;
+    height: 100%;
+
+    max-height: 100%;
 
     object-fit: cover;
 
@@ -354,8 +360,9 @@ footer
     z-index: 2;
 }
 
-/** RESPONSIVE ADJUSTMENT FOR GALLERY **/
+/** RESPONSIVE ADJUSTMENTS **/
 
+/* LARGE SCREENS */
 @media (max-width: 1200px) 
 {
     .mainButtons 
@@ -363,63 +370,344 @@ footer
         gap: 150px;
     }
 
-    .slide img 
+    .gallerySlider 
     {
-        max-height: 300px;
+        width: 85%;
+
+        height: 14vh;
+
+        min-height: 170px;
+
+        max-height: 230px;
     }
 }
 
 /* MEDIUM LAPTOPS */
-
 @media (max-width: 1024px) 
 {
     .mainButtons 
     {
-        gap: 130px;
+        gap: 100px;
     }
 
-    .slide img 
+    .mainButtons li a 
     {
-        max-height: 280px;
+        font-size: 1.2rem;
+    }
+
+    .galleryHeader 
+    {
+        padding: 10px 30px;
+    }
+
+    .galleryHero 
+    {
+        padding: 40px 20px;
+    }
+
+    .gallerySlider 
+    {
+        width: 90%;
+
+        height: 13vh;
+
+        min-height: 160px;
+
+        max-height: 210px;
+    }
+
+    .logoContainer .logo 
+    {
+        height: 70px;
+
+        width: 70px;
     }
 }
 
 /* TABLETS */
-
 @media (max-width: 768px) 
 {
+    body 
+    {
+        background-position: center center;
+
+        background-size: cover;
+
+        font-size: 16px;
+    }
+
+    .galleryHeader 
+    {
+        padding: 10px 20px;
+    }
+
+    .mainNav 
+    {
+        margin-top: 15px;
+    }
+
     .mainButtons 
     {
-        gap: 80px;
+        gap: 60px;
+    }
+
+    .mainButtons li a 
+    {
+        font-size: 1.1rem;
+    }
+
+    .galleryHero 
+    {
+        padding: 30px 15px;
+    }
+
+    .gallerySlider 
+    {
+        width: 95%;
+
+        height: 12vh;
+
+        min-height: 150px;
+
+        max-height: 190px;
     }
 
     .slide img 
     {
-        max-height: 220px;
+        margin-left: 5%;
+    }
+
+    .logoContainer .logo 
+    {
+        height: 60px;
+
+        width: 60px;
+    }
+
+    .hamburgerMenu .dropdown 
+    {
+        width: 280px;
+    }
+}
+
+/* SMALL TABLETS / LARGE PHONES */
+@media (max-width: 600px) 
+{
+    body 
+    {
+        background-position: 50% center;
+
+        font-size: 16px;
+    }
+
+    .galleryHeader 
+    {
+        padding: 8px 15px;
+    }
+
+    .mainNav 
+    {
+        margin-top: 10px;
+    }
+
+    .mainButtons 
+    {
+        gap: 40px;
+    }
+
+    .mainButtons li a 
+    {
+        font-size: 1rem;
+    }
+
+    .galleryHero 
+    {
+        padding: 20px 10px;
+
+        min-height: 100vh;
+    }
+
+    /* Show only 2 images on mobile */
+    .gallerySlider 
+    {
+        width: 100%;
+
+        max-width: 500px;
+
+        height: 300px;
+    }
+
+    .slide 
+    {
+        justify-content: center;
+
+        gap: 4%;
+    }
+
+    .slide img 
+    {
+        width: 48%;
+
+        height: 100%;
+
+        margin-left: 0;
+
+        border-radius: 6px;
+    }
+
+    /* Hide the third image on mobile */
+    .slide img:nth-child(3) 
+    {
+        display: none;
+    }
+
+    .logoContainer .logo 
+    {
+        height: 50px;
+
+        width: 50px;
+    }
+
+    .hamburgerMenu button 
+    {
+        font-size: 1.8rem;
+    }
+
+    .hamburgerMenu .dropdown 
+    {
+        width: 250px;
+
+        top: 70px;
+    }
+
+    .hamburgerMenu .dropdown li a 
+    {
+        padding: 14px 0;
+
+        font-size: 0.95rem;
+    }
+
+    footer 
+    {
+        font-size: 0.85rem;
+
+        padding-bottom: 8px;
     }
 }
 
 /* MOBILE PHONES */
-
 @media (max-width: 480px) 
 {
+    body 
+    {
+        background-position: 50% center;
+    }
+
+    .galleryHeader 
+    {
+        padding: 5px 10px;
+    }
+
     .mainButtons 
     {
         flex-direction: column;
 
-        gap: 20px;
+        gap: 15px;
 
         align-items: center;
     }
 
+    .mainButtons li a 
+    {
+        font-size: 0.95rem;
+    }
+
+    .galleryHero 
+    {
+        padding: 15px 8px;
+    }
+
+    .gallerySlider 
+    {
+        width: 100%;
+
+        max-width: 400px;
+
+        height: 250px;
+    }
+
+    .slide 
+    {
+        gap: 3%;
+    }
+
     .slide img 
     {
-        max-height: 150px;
+        width: 48.5%;
 
-        width: 80%;
+        height: 95%;
 
-        margin-left: 0;
-        
-        margin-right: 0;
+        border-radius: 5px;
+    }
+
+    .logoContainer .logo 
+    {
+        height: 45px;
+
+        width: 45px;
+    }
+
+    .hamburgerMenu button 
+    {
+        font-size: 1.6rem;
+    }
+
+    .hamburgerMenu .dropdown 
+    {
+        width: 220px;
+
+        top: 60px;
+    }
+
+    .hamburgerMenu .dropdown li a 
+    {
+        padding: 12px 0;
+
+        font-size: 0.9rem;
+    }
+
+    footer 
+    {
+        font-size: 0.8rem;
+
+        padding-bottom: 10px;
+    }
+}
+
+/* VERY SMALL PHONES */
+@media (max-width: 400px) 
+{
+    .gallerySlider 
+    {
+        height: 220px;
+
+        max-width: 350px;
+    }
+
+    .slide img 
+    {
+        height: 90%;
+    }
+
+    .mainButtons li a 
+    {
+        font-size: 0.85rem;
+    }
+
+    .logoContainer .logo 
+    {
+        height: 40px;
+
+        width: 40px;
     }
 }
