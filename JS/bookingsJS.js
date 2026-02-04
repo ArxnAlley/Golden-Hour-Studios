@@ -1,4 +1,4 @@
-/* galleryJS */
+/* bookingsJS.js - SIMPLIFIED VERSION */
 
 document.addEventListener("DOMContentLoaded", () => 
 {
@@ -42,28 +42,33 @@ document.addEventListener("DOMContentLoaded", () =>
     
     let selectedDate = null;
 
-    // INITIALIZE CART UI
+    // INITIALIZE CART UI - Show cart icon if there are items
     
-    cartBadge.textContent = cartData.length;
-    
-    if(cartData.length > 0) 
+    function updateCartUI() 
+    {
+        cartData = JSON.parse(localStorage.getItem("cartData")) || [];
+        
+        cartBadge.textContent = cartData.length;
+        
+        if(cartData.length > 0) 
         {
-        
             cartIcon.classList.remove("dummyCartHidden");
-        
+            
             cartIcon.style.opacity = "1";
-        
+            
             cartIcon.style.pointerEvents = "auto";
         } 
-        
-    else 
+        else 
         {
             cartIcon.classList.add("dummyCartHidden");
-        
+            
             cartIcon.style.opacity = "0";
-        
+            
             cartIcon.style.pointerEvents = "none";
         }
+    }
+    
+    updateCartUI();
 
     // HELPER: Scroll Step Into View
     
@@ -88,11 +93,17 @@ document.addEventListener("DOMContentLoaded", () =>
         {
             const target = btn.dataset.back;
             
+            // Hide all steps
             [stepPackage, stepDate, stepTime].forEach(step => step.classList.remove("dummyVisible"));
             
-            let targetStep = target === "package" ? stepPackage : step === "date" ? stepDate : null;
+            // Show target step
+            let targetStep = target === "package" ? stepPackage : target === "date" ? stepDate : null;
             
-            if (targetStep) { targetStep.classList.add("dummyVisible"); scrollToCard(targetStep); }
+            if (targetStep) 
+            { 
+                targetStep.classList.add("dummyVisible"); 
+                scrollToCard(targetStep); 
+            }
         });
     });
 
@@ -107,7 +118,6 @@ document.addEventListener("DOMContentLoaded", () =>
         scrollToCard(stepDate);
     });
 
-    
     // CALENDAR RENDER
     
     function renderCalendar() 
@@ -153,7 +163,6 @@ document.addEventListener("DOMContentLoaded", () =>
                     scrollToCard(stepTime);
                 });
             } 
-            
             else 
             { 
                 cell.style.visibility = "hidden"; 
@@ -168,32 +177,6 @@ document.addEventListener("DOMContentLoaded", () =>
     nextBtn.addEventListener("click", () => { currentDate.setMonth(currentDate.getMonth() + 1); renderCalendar(); });
     
     renderCalendar();
-
-    // PRESELECT PACKAGE IF RETURNING FROM CART
-
-    if (sessionStorage.getItem("fromCart")) 
-    {
-        if(cartData.length > 0) 
-        {
-            const lastAddedPackage = cartData[cartData.length - 1].package;
-            
-            for (let i = 0; i < packageSelect.options.length; i++) 
-            {
-                if (packageSelect.options[i].text === lastAddedPackage) 
-                {
-                    packageSelect.selectedIndex = i;
-
-                    break;
-                }
-            }
-            
-            stepDate.classList.add("dummyVisible");
-            
-            scrollToCard(stepDate);
-        }
-        
-        sessionStorage.removeItem("fromCart");
-    }
 
     // ADD TO CART
 
@@ -212,24 +195,26 @@ document.addEventListener("DOMContentLoaded", () =>
             return;
         }
 
+        // Add to cart
         cartData.push({ package: selectedPackage, price, date: selectedDate, time: selectedTime });
 
         localStorage.setItem("cartData", JSON.stringify(cartData));
-        
-        sessionStorage.setItem("fromBookings", "true");
 
-        cartBadge.textContent = cartData.length;
-        
-        cartIcon.classList.remove("dummyCartHidden");
-        
-        cartIcon.style.opacity = "1";
-        
-        cartIcon.style.pointerEvents = "auto";
+        // Update cart UI
+        updateCartUI();
 
         console.log("Added to cart:", cartData[cartData.length - 1]);
         
         alert("Package added to your cart!");
+        
+        // Reset selections for next booking
+        packageSelect.selectedIndex = 0;
+        timeSelect.selectedIndex = 0;
+        selectedDate = null;
+        
+        // Go back to package selection
+        [stepDate, stepTime].forEach(step => step.classList.remove("dummyVisible"));
+        scrollToCard(stepPackage);
     });
 
 });
-

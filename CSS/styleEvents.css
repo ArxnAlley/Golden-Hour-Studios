@@ -540,34 +540,86 @@ body
 
 /* MOBILE PHONES */
 
-@media (max-width: 480px) 
+@media screen and (max-width: 600px)
 {
-    .eventsTitle
+    .bookBTNWrapper
     {
-        margin-bottom: 40px;
+        position: absolute !important;
+        
+        bottom: 50px !important;
+        
+        left: 50% !important;
+        
+        transform: translateX(-50%) !important;
+        
+        width: auto !important;
+        
+        max-width: calc(100% - 40px) !important;
+    }
+
+    .bookBTN
+    {
+        font-size: 1.3rem !important;
+        
+        padding: 10px 30px !important;
+        
+        white-space: nowrap !important;
+        
+        display: inline-block !important;
+        
+        width: auto !important;
+        
+        height: auto !important;
+        
+        max-width: 100% !important;
+        
+        max-height: none !important;
+        
+        object-fit: initial !important; 
+    }
+
+    .bookBTN::after
+    {
+        width: auto !important;
+        
+        height: auto !important;
+        
+        max-width: none !important;
+        
+        max-height: none !important;
+        
+        object-fit: initial !important;
+    }
+    
+    .eventsMain
+    {
+        padding-bottom: 140px !important;
     }
 
     .waveText
     {
-        font-size: 1.8rem;
+        font-size: 1.8rem !important;
+    }
+}
+
+/* Extra protection for smaller screens */
+
+@media screen and (max-width: 480px)
+{
+    .bookBTN
+    {
+        font-size: 1.2rem !important;
+        
+        padding: 9px 25px !important;
     }
 
-    .eventCard
+    .bookBTNWrapper
     {
-        width: 100%;
-
-        height: 320px;
-
-        align-self: center !important;
+        bottom: 55px !important;
     }
 
-    .eventsGrid
+    .waveText
     {
-        gap: 80px;
-    }
-
-    .cardRevealText 
-    {
-        display: none;
+        font-size: 1.6rem !important;
     }
 }

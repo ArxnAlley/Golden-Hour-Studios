@@ -1,19 +1,7 @@
-/* cartJS.js */
+/* cartJS.js - SIMPLIFIED VERSION */
 
 document.addEventListener("DOMContentLoaded", () => 
 {
-    // RESET CART UNLESS FROM BOOKINGS
-
-    if (!sessionStorage.getItem("fromBookings")) 
-    {
-        localStorage.removeItem("cartData");
-    } 
-
-    else 
-    {        
-        sessionStorage.removeItem("fromBookings");
-    }
-
     // DOM ELEMENTS
     
     const cartItemsContainer = document.getElementById("cartItemsList");
@@ -45,17 +33,17 @@ document.addEventListener("DOMContentLoaded", () =>
             cartItemsContainer.innerHTML =
                 "<p>Your cart is empty. Please select a package from Bookings.</p>";
             
-                subtotalEl.textContent = "$0";
+            subtotalEl.textContent = "$0";
             
-                taxEl.textContent = "$0";
+            taxEl.textContent = "$0";
             
-                totalEl.textContent = "$0";
+            totalEl.textContent = "$0";
             
-                checkoutBtn.disabled = true;
+            checkoutBtn.disabled = true;
             
-                syncCartHeights();
+            syncCartHeights();
             
-                return;
+            return;
         }
 
         checkoutBtn.disabled = false;
@@ -107,10 +95,7 @@ document.addEventListener("DOMContentLoaded", () =>
 
         backBtn.addEventListener("click", () => 
         {
-            // Preserve current cart in sessionStorage so user can add more packages
-
-            sessionStorage.setItem("fromCart", "true");
-
+            // Just go back - cart stays intact
             window.location.href = "bookings.html";
         });
 
@@ -160,8 +145,8 @@ document.addEventListener("DOMContentLoaded", () =>
         e.preventDefault();
 
         const inputs = checkoutForm.querySelectorAll("input");
+        
         for (const input of inputs) 
-
         {
             if (!input.value.trim()) 
             {
@@ -180,6 +165,7 @@ document.addEventListener("DOMContentLoaded", () =>
             confirmation.style.display = "none";
         }, 7000);
 
+        // ONLY clear cart after successful checkout
         localStorage.removeItem("cartData");
         
         renderCart();

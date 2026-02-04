@@ -22,12 +22,17 @@
 
         <header class="header">
 
-            <h1> Packages & Pricing </h1>
+            <!-- LOGO -->
+            <div class="logoLeft">
+                <img src="IMAGES/logo4.png" class="logo" alt="Golden Hour Logo">
+            </div>
 
-            <img src="IMAGES/logo4.png" class="logo" alt="Golden Hour Logo">
+            <!-- TITLE -->
+            <div class="titleCenter">
+                <h1> Packages & Pricing </h1>
+            </div>
 
             <!-- NAVIGATION -->
-
             <nav class="nav">
 
                 <div class="hamburger">☰</div>
@@ -64,7 +69,7 @@
 
         </div>
     
-        <!-- NAIN CONTENT-->
+        <!-- MAIN CONTENT-->
 
         <main>
 
@@ -168,51 +173,9 @@
 
         </footer>
 
-         <script>
-            
-            document.addEventListener("DOMContentLoaded", () => 
-            {
-                const hamburger = document.querySelector(".hamburger");
-    
-                const navLinks = document.querySelector(".navLinks");
-
-                if (!hamburger || !navLinks) return;
-
-                // Toggle panel
-    
-                hamburger.addEventListener("click", () => 
-                {
-                    const isOpen = navLinks.classList.toggle("open");
-
-                    // Swap icon and color
-        
-                    hamburger.textContent = isOpen ? "✖" : "☰"; // X or burger
-        
-                    hamburger.style.color = isOpen ? "#000000" : "#DAA520"; // black X, gold burger
-
-                    // Accessibility
-        
-                    hamburger.setAttribute("aria-expanded", isOpen);
-                });
-
-                // Close panel when a link is clicked
-    
-                navLinks.querySelectorAll("a").forEach(link => 
-                {
-                    link.addEventListener("click", () => 
-                    {
-                        navLinks.classList.remove("open");
-            
-                        hamburger.textContent = "☰"; // Reset to burger
-            
-                        hamburger.style.color = "#DAA520"; // Reset color
-            
-                        hamburger.setAttribute("aria-expanded", false);
-                    });
-                });
-            });
-        
-        </script>
+        <!-- External JavaScript -->
+         
+        <script src="JS/packages-pricingJS.js"></script>
 
     </body>
 

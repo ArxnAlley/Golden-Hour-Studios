@@ -4,33 +4,6 @@ body
     background: linear-gradient(to bottom, #FFF8E1, #FFE082);
 }
 
-/* HEADER */
-
-header.HEADER 
-{
-    position: fixed;
-    
-    top: 0;
-    
-    left: 0;
-    
-    width: 100%;
-    
-    height: 100px; 
-    
-    background: #fff;
-    
-    z-index: 100;
-    
-    display: flex;
-    
-    align-items: center;
-    
-    padding: 0 20px;
-    
-    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-}
-
 /* CART PAGE LAYOUT */
 
 .cartPage 
