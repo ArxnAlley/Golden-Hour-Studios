@@ -5,6 +5,8 @@ body
     background: linear-gradient(to bottom, #FFF8E1, #FFE082);
         
     color: #5C4033;
+
+    padding-top: 90px;
 }
 
 /* MAIN CONTAINER */
@@ -210,6 +212,8 @@ body
 
 @media (max-width: 480px) 
 {
+    
+
     .termsTitle 
     {
         font-size: 1.8rem;
@@ -231,4 +235,5 @@ body
 
         gap: 18px;
     }
+    
 }

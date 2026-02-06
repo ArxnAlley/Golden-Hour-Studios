@@ -71,10 +71,6 @@ body
     gap: 20px;
     
     flex: 0 0 36%;
-    
-    max-height: 100%;
-    
-    overflow-y: auto;
 }
 
 .centerImage img 
@@ -190,37 +186,41 @@ body
         max-width: 700px;
     }
 
-    /* Use order property to interleave cards and images */
-    
+    .centerImage img { order: 100; }
+
+    /* ----- INTERLEAVED FLOW ----- */
+
     .whyUsCard { order: 1; }
-    
     .centerImage img:nth-child(1) { order: 2; }
-    
+
     .aboutUsCard { order: 3; }
-    
     .centerImage img:nth-child(2) { order: 4; }
-    
+
     .styleCard { order: 5; }
-    
     .centerImage img:nth-child(3) { order: 6; }
-    
+
     .trustCard { order: 7; }
-    
     .centerImage img:nth-child(4) { order: 8; }
-    
+
     .clientCard { order: 9; }
-    
-    .missionCard { order: 10; }
-    
-    .communityCard { order: 11; }
-    
-    .futureCard { order: 12; }
-    
-    .improvingCard { order: 13; }
-    
-    .testimonialsCard { order: 14; }
-    
-    .awardsCard { order: 15; }
+    .centerImage img:nth-child(5) { order: 10; }
+
+    .missionCard { order: 11; }
+    .centerImage img:nth-child(6) { order: 12; }
+
+    .communityCard { order: 13; }
+    .centerImage img:nth-child(7) { order: 14; }
+
+    .futureCard { order: 15; }
+    .centerImage img:nth-child(8) { order: 16; }
+
+    .improvingCard { order: 17; }
+    .centerImage img:nth-child(9) { order: 18; }
+
+    .testimonialsCard { order: 19; }
+    .centerImage img:nth-child(10) { order: 20; }
+
+    .awardsCard { order: 21; }
 
     .card 
     {

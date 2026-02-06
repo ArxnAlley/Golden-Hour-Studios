@@ -433,10 +433,7 @@ body
 
 @media (max-width: 1200px) 
 {
-    body
-    {
-        padding-top: 90px;
-    }
+    
 
     .reviewsStaggered
     {
@@ -487,10 +484,7 @@ body
 
 @media (max-width: 1024px) 
 {
-    body
-    {
-        padding-top: 80px;
-    }
+    
 
     .reviewsStaggered
     {
@@ -548,10 +542,7 @@ body
 
 @media (max-width: 768px) 
 {
-    body
-    {
-        padding-top: 90px;
-    }
+    
 
     .reviewsStaggered
     {
@@ -629,10 +620,7 @@ body
 
 @media (max-width: 600px)
 {
-    body
-    {
-        padding-top: 80px;
-    }
+    
 
     .reviewsStaggered
     {
@@ -690,11 +678,7 @@ body
 
 @media (max-width: 480px) 
 {
-    body
-    {
-        padding-top: 90px;
-    }
-
+    
     .reviewsStaggered
     {
         max-width: 100%;
@@ -813,10 +797,7 @@ body
 
 @media (max-width: 400px)
 {
-    body
-    {
-        padding-top: 80px;
-    }
+    
 
     .reviewsStaggered
     {

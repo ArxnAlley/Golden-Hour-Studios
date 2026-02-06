@@ -9,6 +9,11 @@ html, body
   padding: 0;
 }
 
+*, *::before, *::after 
+{
+  box-sizing: border-box;
+}
+
 body 
 {  
   display: flex;
@@ -341,9 +346,7 @@ body
 
 .footer
 {
-  bottom: 0;
-
-  left: 0;
+  width: 100%;
   
   background-color: #FFFFFF;
 
@@ -356,5 +359,56 @@ body
   border-top: 3px solid #DAA520;
 
   font-size: 0.9rem;
+  
+  margin-top: auto;
 }
 
+/* MEDIA QUERIES */
+
+/* Tablet and below */
+@media (max-width: 768px) 
+{
+  body 
+  {
+    overflow-x: hidden;
+  }
+  
+  .dummyBookingFlow 
+  {
+    padding: 0 15px;
+  }
+  
+  .dummyInner 
+  {
+    padding: 30px 15px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 480px) 
+{
+  
+
+  .dummyBookingFlow 
+  {
+    padding: 0 10px;
+  }
+  
+  .dummyInner 
+  {
+    padding: 25px 12px;
+  }
+  
+  .dummyCalendarGrid 
+  {
+    gap: 4px;
+  }
+  
+  .dummyCalendarGrid div 
+  {
+    padding: 8px 4px;
+    font-size: 0.85rem;
+    min-height: 35px;
+  }
+  
+}
