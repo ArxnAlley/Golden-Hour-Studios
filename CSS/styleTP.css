@@ -6,7 +6,6 @@ body
         
     color: #5C4033;
 
-    padding-top: 90px;
 }
 
 /* MAIN CONTAINER */
@@ -212,7 +211,10 @@ body
 
 @media (max-width: 480px) 
 {
-    
+    body
+    {
+        padding-top: 90px;
+    }
 
     .termsTitle 
     {
